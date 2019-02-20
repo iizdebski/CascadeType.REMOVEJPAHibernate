@@ -36,7 +36,7 @@ public class Employee {
     @Column(name="salary")
     private Double salary;
 
-    @OneToOne(cascade=CascadeType.PERSIST)
+    @OneToOne(cascade={CascadeType.PERSIST, CascadeType.REMOVE})
     @JoinColumn(name="address_id")
     private Address address;
 
